@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega0Gx</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="first-title">Your Result</div>
+            <div class="circle">
+                <div class="score">76</div>
+                <div class="total-score">of 100</div>
+            </div>
+            <div class="second-title">Great</div>
+            <div class="subtitle">You scored higher than 65% of the people who have taken these tests.</div>
+        </div>
+        <div class="right">
+            <div class="title">Summary</div>
+            <div class="list">
+            </div>
+            <button class="button">Continue</button>
+        </div>
+    </div>
+    <script>
+        fetch("./data.json")
+            .then((response) => response.json())
+            .then((data) => {
+                const list=document.querySelector(".list");
+                data.forEach((item)=>{
+                    const card = document.createElement("div");
+                    card.classList.add("card");
+                    card.style.color=`${item.color}`;
+                    card.style.backgroundColor=`${item.backgroundColor}`;
+                    card.innerHTML = `<div class="left-card"><img src=${item.icon}  alt="icon"><p class="name">${item.category}</p></div><p class="value">${item.score}<span class="span-value"> / 100</span></p>`
+                    list.appendChild(card);
+                });
+            })
+    </script>
+</body>
+</html>

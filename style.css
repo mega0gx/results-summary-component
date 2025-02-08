@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=DotGothic16&family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Rubik+Glitch&family=Sriracha&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: hsl(221, 100%, 96%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: "Hanken Grotesk", serif;
+    font-weight: 500;
+}
+
+/* container style */
+.container{
+    background-color: white;
+    display: flex;
+    border-radius: 20px;
+}
+.left, .right{
+    width: 50%;
+    overflow: break-word;
+    word-break: break-word;
+    padding: 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+/* left box style */
+.container .left{
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 20px;
+    color: white;
+    align-items: center;
+
+}
+.container .left .circle{
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem
+    
+}
+.container .left .circle .score{
+    font-size: 6rem;
+}
+.container .left .circle .total-score{
+    font-size:1.5rem;
+    color: rgb(177, 177, 177);
+}
+.container .left .first-title{
+    font-size: 2rem;
+}
+.container .left .second-title{
+    font-size: 3rem;
+}
+.container .left .subtitle{
+    font-size: 1.1rem;
+    text-align: center;
+    white-space: normal;
+}
+
+/* right box style */
+.container .right .title{
+    font-size: 3rem;
+}
+.container .right .list{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+.container .right .list .card{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+    padding: 1.3rem;
+    mix-blend-mode: multiply;
+}
+.left-card{
+    display: flex;
+    gap:1rem;
+}
+
+.button{
+    background-color: rgb(34, 0, 34);
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    width: 100%;
+    height: auto;
+    font-size: 1.8rem;
+    padding: 1.3rem 1rem;
+    text-align: center;
+}
+.button:hover{
+    background-color: rgb(155, 2, 79);
+}
+.value{
+    color: black;
+}
+.span-value{
+    color:rgb(100, 100, 100)
+}
